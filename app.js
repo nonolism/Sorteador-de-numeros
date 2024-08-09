@@ -2,8 +2,7 @@ let campoQuantidade = document.getElementById('quantidade');
 let campoInicio = document.getElementById('de');
 let campoFim = document.getElementById('ate');
 let botaoReiniciar = document.getElementById('btn-reiniciar');
-let containerResultado = document.getElementById('resultado')
-let mensagemResultado = containerResultado.querySelector('.texto__paragrafo')
+let mensagemResultado = document.getElementById('resultado').querySelector('.texto__paragrafo')
 
 function gerarNumeroEntreInicioEFim(inicio,fim){
     return Math.floor(Math.random() * (fim - inicio + 1)) + inicio;
