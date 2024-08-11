@@ -18,7 +18,7 @@ function gerarVariosNumeros(quantidade,inicio,fim){
     return listaDeNumerosGerados;
 }
 
-function alterarMensagemResultado(numerosSorteados = []) {
+function alterarMensagemResultado(numerosSorteados = []){
     let mensagem = 'Números sorteados:  nenhum até agora';
     if (numerosSorteados.length != 0 ){
         mensagem = `Números sorteados: ${numerosSorteados}`;
@@ -30,7 +30,7 @@ function alterarMensagemResultado(numerosSorteados = []) {
     }
 }
 
-function sortear() {
+function sortear(){
     let quantidade = parseInt(campoQuantidade.value);
     let inicio = parseInt(campoInicio.value);
     let fim = parseInt(campoFim.value);
