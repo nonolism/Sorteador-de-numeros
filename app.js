@@ -12,7 +12,11 @@ function gerarVariosNumeros(quantidade,inicio,fim){
     let contador = 0;
     let listaDeNumerosGerados = [];
     while (contador < quantidade){
-        listaDeNumerosGerados.push(gerarNumeroEntreInicioEFim(inicio,fim));
+        let numero = gerarNumeroEntreInicioEFim(inicio,fim);
+        while (listaDeNumerosGerados.includes(numero)) {
+            numero = gerarNumeroEntreInicioEFim(inicio,fim);
+        }
+        listaDeNumerosGerados.push(numero)
         contador++;
     }
     return listaDeNumerosGerados;
