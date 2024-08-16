@@ -11,15 +11,21 @@ function gerarNumeroEntreInicioEFim(inicio,fim){
 function gerarVariosNumeros(quantidade,inicio,fim){
     let contador = 0;
     let listaDeNumerosGerados = [];
-    while (contador < quantidade){
-        let numero = gerarNumeroEntreInicioEFim(inicio,fim);
-        while (listaDeNumerosGerados.includes(numero)) {
-            numero = gerarNumeroEntreInicioEFim(inicio,fim);
+    if (quantidade <= (fim - inicio)){
+        while (contador < quantidade){
+            let numero = gerarNumeroEntreInicioEFim(inicio,fim);
+            while (listaDeNumerosGerados.includes(numero)) {
+                numero = gerarNumeroEntreInicioEFim(inicio,fim);
+            }
+            listaDeNumerosGerados.push(numero)
+            contador++;
         }
-        listaDeNumerosGerados.push(numero)
-        contador++;
+        return listaDeNumerosGerados;
     }
-    return listaDeNumerosGerados;
+    else {
+        alert('Quantidade de números solicitado maior do que o limite');
+        return null;
+    }
 }
 
 function alterarMensagemResultado(numerosSorteados = []){
